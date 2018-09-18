@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-car.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(window).bind('load', function() {
+            $().prepare_slider();
+            $('#slider_list > li').over();
+            var slider_link = $('.slider .box-right a');
+            var slider_link_index = 1;
+            var slider_count = $('#slider_list > li').size();
+
+            function slider_intro() {
+                slider_link.trigger('click');
+                slider_link_index++;
+                setTimeout(function() {
+                    slider_intro()
+                }, 2000);
+            }
+            setTimeout(function() {
+                slider_intro()
+            }, 2000)
+        })(jQuery);
+
+    </script>
+</head>
+
+<body>
+
+    <div class="slider">
+        <div class="box-left"><a id="left_but">&nbsp;</a></div>
+        <div class="box-top">
+            <ul id="slider_list">
+                <li><a href="/"><img src="images/p1.jpg">Товар 1</a></li>
+                <li><a href="/"><img src="images/p2.jpg">Товар 2</a></li>
+                <li><a href="/"><img src="images/p3.jpg">Товар 3</a></li>
+                <li><a href="/"><img src="images/p4.jpg">Товар 4</a></li>
+                <li><a href="/"><img src="images/p5.jpg">Товар 5</a></li>
+            </ul>
+        </div>
+        <div class="box-right"><a id="right_but">&nbsp;</a></div>
+    </div>
+
+
+</body>
+
+</html>
