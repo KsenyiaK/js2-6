@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="valid.js"></script>
+    <script src="city.js"></script>
+</head>
+
+<body>
+    <form action="#" class="container" id="review">
+        <fieldset>
+            <label><input class="item name" type="text" placeholder="Иванов Иван Иванович" pattern="^[a-zA-ZА-Яа-яЁё\s]+$"></label>
+            <label><input class="item phone" type="text"
+                                  placeholder="+7(000)000-0000"></label>
+            <label><input class="item email" type="text" placeholder="mail@yandex.ru"></label>
+            <label><input class="ui-widget-content" type="text" id="datepicker" placeholder="ДД.ММ.ГГГГ"></label>
+            <label for="city">
+					<select name="city" class="item city" id="city"></select>
+				</label>
+            <label for="reviewtext">
+            <textarea class="item textReview" name="" id="reviewtext" placeholder="Ваше сообщение"></textarea></label>
+            <button id="send" type="button">Отправить</button>
+        </fieldset>
+    </form>
+
+
+    <div id="dialog" title="Ошибка ввода">
+
+    </div>
+
+</body>
+
+</html>
